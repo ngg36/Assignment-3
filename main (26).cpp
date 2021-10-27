@@ -51,7 +51,7 @@ int main() {
     ifstream in;
     in.open("bakery.txt");
 
-    int userInput = 0, result;
+    int userInput = 0;
     int numBakeries = 0, numItems = 0;
 
     readBakeryMetadata(in, numBakeries, numItems);
@@ -79,11 +79,12 @@ int main() {
                 for (int i = 0; i < numBakeries; i++) {
                     sortByQuantityPrice(arr[i], numItems);
                 }
+		displayBakeryItems(arr, numBakeries, numItems);	
 
                 break;
             case 3:
 
-                result = searchMax(arr, numBakeries, numItems);
+                searchMax(arr, numBakeries, numItems);
                 break;
             
             case 4:
